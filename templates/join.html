@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section>
+    <div class="row">
+        <div class="col-md-12">
+            <form action="join.html" method="post">
+                <h1>Join the movement.</h1>
+                <fieldset>
+                    <legend><span class="number">1</span>Your personal info</legend>
+                    <!-- FIRST NAME -->
+                    <label for="frist_name">First Name:</label>
+                    <input type="text" id="first_name" name="first_name">
+                    <!-- LAST NAME -->
+                    <label for="last_name">Last Name:</label>
+                    <input type="text" id="last_name" name="last_name">
+                    <!-- EMAIL -->
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                    <!-- PHONE -->
+                    <label for="phone">Phone number:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                </fieldset>
+
+                <fieldset>
+                    <legend><span class="number">2</span>Choose your membership</legend>
+                    <!-- CLASSES -->
+                    <label for="classes">Choose your group classes:</label>
+                    <input type="checkbox" id="yoga" value="yoga" name="classes">
+                    <label for="yoga" class="light">Yoga</label>
+                    <br>
+                    <input type="checkbox" id="pilates" value="pilates" name="classes">
+                    <label for="pilates" class="light">Pilates</label>
+                    <br>
+                    <input type="checkbox" id="self-defense" value="self-defense" name="classes">
+                    <label for="self-defense" class="light">Self-defense</label>
+                    <br>
+                    <input type="checkbox" id="crossfit" value="crossfit" name="classes">
+                    <label for="crossfit" class="light">CrossFit</label>
+                    <br>
+                    <input type="checkbox" id="pt" value="pt" name="classes">
+                    <label for="pt" class="light">Personal trainer</label>
+                    <br>
+                    <br>
+                    <!-- MEMBERSHIP -->
+                    <label for="membership">Membership:</label>
+                    <select id="job" name="user_job">
+                        <optgroup label="Daily">
+                            <option value="day_membership">Day card (1h) <span class="value">5€</span></option>
+                            <option value="day_24_membership">Day card (12h) <span class="value">20€</span>
+                            </option>
+                            <option value="day_classs_membership">Day card + class <span class="value">10€</span>
+                            </option>
+                        </optgroup>
+                        <optgroup label="Monthly">
+                            <option value="month_membership">Monthly membership <span class="value">50€</span>
+                            </option>
+                            <option value="month_class_membership">Monthly membership + classes <span
+                                    class="value">70€</span></option>
+                        </optgroup>
+                        <optgroup label="Yearly">
+                            <option value="business_owner">Yearly membership <span class="value">400€</span>
+                            </option>
+                            <option value="business_owner">Yearly membership + classes <span class="value">500€</span>
+                                <span class="offer">exclusive offer</span>
+                            </option>
+                        </optgroup>
+                        <optgroup label="Personal trainer">
+                            <option value="trainer_membership">Lesson <span class="value">30€</span></option>
+                            <option value="trainer_diet_membership">Lesson + weightloss plan <span
+                                    class="value">50€</span></option>
+
+                        </optgroup>
+                    </select>
+                </fieldset>
+                <button type="submit">Join</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock content %}
